@@ -16,6 +16,13 @@
   --color-border: #eee;
   --color-shadow: rgba(0, 0, 0, 0.1);
   --color-shadow-hover: rgba(0, 0, 0, 0.15);
+  --color-gradient-start: #667eea;
+  --color-gradient-end: #764ba2;
+  --gradient-card-header: linear-gradient(
+    135deg,
+    var(--color-gradient-start) 0%,
+    var(--color-gradient-end) 100%
+  );
 
   --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-size-base: 16px;
@@ -56,8 +63,8 @@ body {
 .navbar-heading {
   font-weight: 700;
   font-size: 30px;
-  padding: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
 }
 
 .navbar-links {
@@ -90,7 +97,7 @@ body {
   background-color: var(--color-background-card);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   max-width: 700px;
   width: 100%;
 }
@@ -123,4 +130,77 @@ body {
 
 .container a:hover {
   text-decoration: underline;
+}
+
+.marvel {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.marvel:hover {
+  scale: 1.02;
+  transition: var(--transition-default);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.marvel-heading {
+  background: var(--gradient-card-header);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.marvel-heading h2 {
+  color: white;
+  padding: 10px;
+  font-size: var(--font-size-xs);
+  letter-spacing: 2px;
+}
+
+.marvel-content {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.marvel-content h3 {
+  margin-bottom: 10px;
+}
+
+.marvel-content p {
+  color: var(--color-text-light);
+}
+
+.marvel-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgb(204, 204, 204);
+  padding: 10px 0;
+  color: var(--color-text-light);
+}
+
+.marvel-btn {
+  border: 1px solid rgb(235, 235, 235);
+  color: var(--color-text-light);
+  padding: 5px 10px;
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-sm);
+}
+
+.marvel-btn:hover {
+  color: var(--color-gradient-start);
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
 }
